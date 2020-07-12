@@ -10,9 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-/**
- * @author chase
- */
 @Component
 @WebFilter(urlPatterns = {"/index.html"}, filterName = "userFilter")
 public class UserFilter implements Filter {
