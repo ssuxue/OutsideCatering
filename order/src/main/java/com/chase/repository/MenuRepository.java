@@ -1,6 +1,6 @@
 package com.chase.repository;
 
-import com.chase.entity.Menu;
+import com.chase.pojo.Menu;
 
 import java.util.List;
 

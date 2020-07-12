@@ -1,6 +1,6 @@
 package com.chase.repository;
 
-import com.chase.entity.Type;
+import com.chase.pojo.Type;
 
 import java.util.List;
 

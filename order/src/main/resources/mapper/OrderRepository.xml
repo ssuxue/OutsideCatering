@@ -33,4 +33,8 @@
     <select id="count" resultType="int">
         select count(*) from t_order where state = 0
     </select>
+
+    <delete id="deleteByMid" parameterType="long">
+		delete from t_order where mid = #{mid}
+	</delete>
 </mapper>

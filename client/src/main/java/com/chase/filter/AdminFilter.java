@@ -1,6 +1,6 @@
 package com.chase.filter;
 
-import com.chase.entity.Admin;
+import com.chase.pojo.Admin;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.*;

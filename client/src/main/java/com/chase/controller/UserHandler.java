@@ -1,7 +1,7 @@
 package com.chase.controller;
 
-import com.chase.entity.User;
-import com.chase.entity.UserVO;
+import com.chase.pojo.User;
+import com.chase.pojo.UserVO;
 import com.chase.feign.UserFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

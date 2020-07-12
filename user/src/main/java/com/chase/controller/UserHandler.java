@@ -1,6 +1,6 @@
 package com.chase.controller;
 
-import com.chase.entity.User;
+import com.chase.pojo.User;
 import com.chase.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

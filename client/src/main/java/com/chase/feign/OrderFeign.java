@@ -1,7 +1,7 @@
 package com.chase.feign;
 
-import com.chase.entity.Order;
-import com.chase.entity.OrderVO;
+import com.chase.pojo.Order;
+import com.chase.pojo.OrderVO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,4 +18,7 @@ public interface OrderFeign {
 
     @PutMapping("/order/updateState/{id}")
     public void updateState(@PathVariable("id") long id);
+
+    @DeleteMapping("/order/deleteByMid/{mid}")
+    public void deleteByMid(@PathVariable("mid") long mid);
 }

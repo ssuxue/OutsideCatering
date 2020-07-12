@@ -1,6 +1,6 @@
 package com.chase.repository;
 
-import com.chase.entity.Admin;
+import com.chase.pojo.Admin;
 
 /**
  * @author chase

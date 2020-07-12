@@ -1,7 +1,7 @@
 package com.chase.controller;
 
-import com.chase.entity.Order;
-import com.chase.entity.OrderVO;
+import com.chase.pojo.Order;
+import com.chase.pojo.OrderVO;
 import com.chase.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -44,5 +44,10 @@ public class OrderHandler {
     @PutMapping("/updateState/{id}")
     public void updateState(@PathVariable("id") long id) {
         orderRepository.updateState(id);
+    }
+
+    @DeleteMapping("/deleteByMid/{mid}")
+    public void deleteByMid(@PathVariable("mid") long mid){
+        orderRepository.deleteByMid(mid);
     }
 }

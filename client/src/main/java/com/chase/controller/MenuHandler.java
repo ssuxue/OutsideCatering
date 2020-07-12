@@ -1,15 +1,13 @@
 package com.chase.controller;
 
-import com.chase.entity.Menu;
-import com.chase.entity.MenuVO;
-import com.chase.entity.Type;
+import com.chase.feign.OrderFeign;
+import com.chase.pojo.Menu;
+import com.chase.pojo.MenuVO;
 import com.chase.feign.MenuFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-
-import java.util.List;
 
 /**
  * @author chase
@@ -19,6 +17,8 @@ import java.util.List;
 public class MenuHandler {
     @Autowired
     private MenuFeign menuFeign;
+    @Autowired
+    private OrderFeign orderFeign;
 
     @GetMapping("/findAll")
     @ResponseBody
@@ -34,6 +34,7 @@ public class MenuHandler {
 
     @GetMapping("/deleteById/{id}")
     public String deleteById(@PathVariable("id") long id) {
+        orderFeign.deleteByMid(id);
         menuFeign.deleteById(id);
         return "redirect:/menu/redirect/menu_manage";
     }

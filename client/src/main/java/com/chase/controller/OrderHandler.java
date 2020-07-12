@@ -1,9 +1,9 @@
 package com.chase.controller;
 
-import com.chase.entity.Menu;
-import com.chase.entity.Order;
-import com.chase.entity.OrderVO;
-import com.chase.entity.User;
+import com.chase.pojo.Menu;
+import com.chase.pojo.Order;
+import com.chase.pojo.OrderVO;
+import com.chase.pojo.User;
 import com.chase.feign.OrderFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

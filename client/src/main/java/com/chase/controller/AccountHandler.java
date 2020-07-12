@@ -1,7 +1,7 @@
 package com.chase.controller;
 
-import com.chase.entity.Admin;
-import com.chase.entity.User;
+import com.chase.pojo.Admin;
+import com.chase.pojo.User;
 import com.chase.feign.AccountFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

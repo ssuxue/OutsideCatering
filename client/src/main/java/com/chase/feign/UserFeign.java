@@ -1,9 +1,7 @@
 package com.chase.feign;
 
-import com.chase.entity.Menu;
-import com.chase.entity.MenuVO;
-import com.chase.entity.Type;
-import com.chase.entity.User;
+import com.chase.pojo.Type;
+import com.chase.pojo.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 

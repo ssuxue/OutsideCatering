@@ -1,12 +1,11 @@
 package com.chase.controller;
 
-import com.chase.entity.Menu;
-import com.chase.entity.MenuVO;
-import com.chase.entity.Type;
+import com.chase.pojo.Menu;
+import com.chase.pojo.MenuVO;
+import com.chase.pojo.Type;
 import com.chase.repository.MenuRepository;
 import com.chase.repository.TypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

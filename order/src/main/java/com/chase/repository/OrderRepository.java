@@ -1,6 +1,6 @@
 package com.chase.repository;
 
-import com.chase.entity.Order;
+import com.chase.pojo.Order;
 
 import java.util.List;
 
@@ -11,4 +11,5 @@ public interface OrderRepository {
     public List<Order> findAll(int index, int limit);
     public void updateState(long id);
     public int count();
+    public void deleteByMid(long mid);
 }

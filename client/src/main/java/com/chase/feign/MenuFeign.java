@@ -1,11 +1,10 @@
 package com.chase.feign;
 
-import com.chase.entity.Menu;
-import com.chase.entity.MenuVO;
-import com.chase.entity.Type;
+import com.chase.pojo.Menu;
+import com.chase.pojo.MenuVO;
+import com.chase.pojo.Type;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
