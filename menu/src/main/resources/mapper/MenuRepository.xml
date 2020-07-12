@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace:填写映射当前的Mapper接口，所有的增删改查的参数和返回值类型，
+		就可以直接填写缩写，不区分大小写，直接通过方法名去找类型-->
+<mapper namespace="com.chase.repository.MenuRepository">
+    <resultMap id="menuMap" type="Menu">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="price" property="price"/>
+        <result column="flavor" property="flavor"/>
+        <association property="type" select="com.chase.repository.TypeRepository.findById" column="tid"/>
+    </resultMap>
+    
+    <select id="findAll" resultMap="menuMap">
+        select * from t_menu limit #{param1}, #{param2}
+    </select>
+    
+    <select id="count" resultType="int">
+        select count(id) from t_menu
+    </select>
+
+    <select id="findById" parameterType="java.lang.Long" resultMap="menuMap">
+        select * from t_menu where id = #{id}
+    </select>
+    
+    <insert id="save" parameterType="Menu">
+        insert into t_menu(name, price, flavor, tid) values(#{name}, #{price}, #{flavor}, #{type.id})
+    </insert>
+
+    <insert id="update" parameterType="Menu">
+        update t_menu set name = #{name}, price = #{price}, flavor = #{flavor}, tid = #{type.id} where id = #{id}
+    </insert>
+
+    <delete id="deleteById" parameterType="java.lang.Long">
+        delete from t_menu where id = #{id}
+    </delete>
+</mapper>
